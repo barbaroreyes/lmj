@@ -18,7 +18,7 @@
       "function": {
         "createOrdess": {
           "deploymentBucketName": "amplify-lmj-dev-45502-deployment",
-          "s3Key": "amplify-builds/createOrdess-364a4f474d564a764954-build.zip"
+          "s3Key": "amplify-builds/createOrdess-4c39746b736246657a67-build.zip"
         },
         "makePays": {
           "deploymentBucketName": "amplify-lmj-dev-45502-deployment",
