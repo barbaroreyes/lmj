@@ -1,0 +1,30 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-lmj-dev-45502-authRole",
+      "UnauthRoleArn": "arn:aws:iam::217175807922:role/amplify-lmj-dev-45502-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::217175807922:role/amplify-lmj-dev-45502-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-lmj-dev-45502-deployment",
+      "UnauthRoleName": "amplify-lmj-dev-45502-unauthRole",
+      "StackName": "amplify-lmj-dev-45502",
+      "StackId": "arn:aws:cloudformation:us-east-1:217175807922:stack/amplify-lmj-dev-45502/f47c16f0-3bc2-11ec-8016-127e2c9f2829",
+      "AmplifyAppId": "d3jtbvofnthp5c"
+    },
+    "categories": {
+      "auth": {
+        "lmjb6b88659": {}
+      },
+      "function": {
+        "createOrdess": {
+          "deploymentBucketName": "amplify-lmj-dev-45502-deployment",
+          "s3Key": "amplify-builds/createOrdess-5361646d527a64594e6a-build.zip"
+        },
+        "makePays": {
+          "deploymentBucketName": "amplify-lmj-dev-45502-deployment",
+          "s3Key": "amplify-builds/makePays-33692f4f3339796c3279-build.zip"
+        }
+      }
+    }
+  }
+}
