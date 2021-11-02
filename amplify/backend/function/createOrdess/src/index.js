@@ -34,7 +34,7 @@ const createJollaOrder = async (payload) => {
         Item: {
           id: uuidv4(),
           __typename: JOLLA_ORDER_TYPE,
-          book_id: cartItem.id,
+          jolla_id: cartItem.id,
           order_id: payload.order_id,
           customer: payload.email,
           createdAt: new Date().toISOString(),
