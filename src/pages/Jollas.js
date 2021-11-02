@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { JollaContext } from '../context/jollas';
 
 
-const Books = () => {
+const Jollas = () => {
     const { jollas } = useContext(JollaContext);
 
     if (!jollas.length) {
@@ -12,7 +12,7 @@ const Books = () => {
 
     return (
         <section className="books">
-            {jollas.map(({ image: image, id, title }) => (
+            {jollas.map(({ image, id, title }) => (
                 <article key={id} className="book">
                     <div className="book-image">
                         <img src={image} alt={title} />
@@ -24,4 +24,4 @@ const Books = () => {
     )
 }
 
-export default Books
+export default Jollas
