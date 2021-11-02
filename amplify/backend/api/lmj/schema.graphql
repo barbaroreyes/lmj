@@ -82,4 +82,11 @@ type Mutation {
     @function(name: "makePays-${env}")
     @function(name: "createOrdess-${env}")
 }
-
+ 
+input Categ {
+  id: ID!
+  name: String
+  image: String
+  
+ 
+}

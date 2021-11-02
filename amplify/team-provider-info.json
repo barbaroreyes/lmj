@@ -18,11 +18,11 @@
       "function": {
         "createOrdess": {
           "deploymentBucketName": "amplify-lmj-dev-45502-deployment",
-          "s3Key": "amplify-builds/createOrdess-5361646d527a64594e6a-build.zip"
+          "s3Key": "amplify-builds/createOrdess-364a4f474d564a764954-build.zip"
         },
         "makePays": {
           "deploymentBucketName": "amplify-lmj-dev-45502-deployment",
-          "s3Key": "amplify-builds/makePays-33692f4f3339796c3279-build.zip"
+          "s3Key": "amplify-builds/makePays-76506d495a6775577577-build.zip"
         }
       }
     }
