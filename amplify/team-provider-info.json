@@ -22,7 +22,7 @@
         },
         "makePays": {
           "deploymentBucketName": "amplify-lmj-dev-45502-deployment",
-          "s3Key": "amplify-builds/makePays-76506d495a6775577577-build.zip"
+          "s3Key": "amplify-builds/makePays-2b454972482f3577494c-build.zip"
         }
       }
     }

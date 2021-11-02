@@ -1,48 +1,54 @@
-import React,{useState,useEffect} from 'react';
-import {Switch , Route} from 'react-router-dom';
-import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react';
-import Amplify,{API,graphqlOperation} from 'aws-amplify';
-import confi from './aws-exports'
-import {listJollas} from './graphql/queries'
-import Pay from './conpo/Payment'
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+// Amplify
+import Amplify from "aws-amplify";
 
-Amplify.configure(confi)
+// Pages
+import Home from "./pages/Home"
+import Error from "./pages/Error";
+import Jollas from "./pages/Jollas";
+import Cart from "./pages/Cart";
+import Checkout from "./pages/Checkout";
+import JollaDetails from "./pages/JollaDetails";
+import Admin from './pages/Admin';
 
+// Components
+import Header from "./components/Header"
 
-function App() {
-
-
-  const [prendas,setPrendas] = useState([])
-
- useEffect(()=>{
-   fectPrendas()
- },[])
-
-
-  const fectPrendas = async () => {
-    try {
-      const listData = await API.graphql(graphqlOperation(listJollas));
-      const  dataList = listData.data.listJollas.items;
-      setPrendas(dataList)
-      console.log(dataList,'datalist')
-
-      
-    } catch (error) {
-      
-    }
-  }
+// Amplify Configurations
+import awsExports from "./aws-exports";
+Amplify.configure(awsExports);
 
 
+const App = () => {
   return (
-    <div className="App">
+    <Router>
+      <Header />
       <Switch>
         <Route exact path="/">
-          <AmplifySignOut/>
-          <Pay/>
+          <Home />
+        </Route>
+        <Route path="/cart">
+          <Cart />
+        </Route>
+        <Route path="/checkout">
+          <Checkout />
+        </Route>
+        <Route exact path="/jollas">
+          <Jollas />
+        </Route>
+        <Route
+          path="/jollas/:id"
+          children={<JollaDetails></JollaDetails>}>
+        </Route>
+        <Route path="/admin">
+          <Admin />
+        </Route>
+        <Route path="*">
+          <Error />
         </Route>
       </Switch>
-    </div>
+    </Router>
   );
 }
 
-export default withAuthenticator(App)  ;
+export default App;
