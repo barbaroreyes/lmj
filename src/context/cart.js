@@ -32,8 +32,8 @@ const CartProvider = ({ children }) => {
     setCart(updatedCart);
   };
 
-  const addToCart = (book) => {
-    const { id, title, price, image } = book;
+  const addToCart = (jolla) => {
+    const { id, title, price, image } = jolla;
     const cartItem = [...cart].find((item) => item.id === id);
     if (cartItem) {
       increaseAmount(id);
